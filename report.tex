@@ -5,6 +5,7 @@
 \usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage{csvsimple}
+\usepackage{amsmath}
 
 \usepackage{tikz}
 \usetikzlibrary{bayesnet}
@@ -77,7 +78,22 @@ make it better suited to the given map image.
 
 The goal is to learn a model and predict the location of unseen image
 patches. Figure~\ref{fig:generation} shows the process of data set
-generation.
+generation. To this end, we will construct a generative model for the
+distribution.
+
+\begin{align}
+p(x,y,R,G,B)  
+\end{align}
+
+The regression will be performed by deriving a point estimate from the
+discrminative model by using the \emph{mode} of the distribution. We
+decided to create the generative model, since it allows to construct
+an image from the trained model.
+
+\begin{align}
+p(x,y \mid R,G,B)  
+\end{align}
+. 
 
 \begin{figure}
   \centering
@@ -110,14 +126,15 @@ This leads to the data set that can be found in the appendix.
 
 
 In this setting, the availability of the data is not a problem and new
-data can be easily generated. What we would like to have is a
-dependency model that is able to capture the multivariate distribution
-of the sample data. This approach is based on Sklar's theorem that
-states that multivariate distribution can be described by marginal
-distributions and the dependence structure----the copulas. Using
-bivariate copulas as building blocks, more complex interaction
-structures can be achieved by building \emph{vine copulas}--nested
-sets of connected trees.
+data can be easily generated. The presented approach is largely
+data-driven but also exploits the knowledge of the construction of the
+dataset. What we would like to have is a dependency model that is able
+to capture the multivariate distribution of the sample data. This
+approach is based on Sklar's theorem that states that multivariate
+distribution can be described by marginal distributions and the
+dependence structure----the copulas. Using bivariate copulas as
+building blocks, more complex interaction structures can be achieved
+by building \emph{vine copulas}--nested sets of connected trees.
 
 \section{Methods}
 
@@ -255,7 +272,9 @@ probability distributions.
                                           
 \section{Discussion}
 
-
+The presented results indicate the suitability of our approach. In a
+real-world setting, run-time and computational complexity will be
+crucial which we left out here.
 
 \section{Conclusion}
 
@@ -274,13 +293,12 @@ real-world scenario, successive images will be, leading a a Bayesian
 network, as presented by Daphne.
 
 
-
 \appendix
 
 \section{Supplementary Material}
 
 \section{Dataset with average red, green, and blue values}
 \begin{center}
-  \csvautotabular{../all_vals.csv}
+  \csvautotabular{all_vals.csv}
 \end{center}
 \end{document}
