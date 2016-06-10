@@ -244,6 +244,31 @@ information in two channels, and use arbitrary information in the
 third channel---and therefore even keep our initial image to a great
 extent.
 
+
+\subsection{Gaussian Graphical Model}
+
+In this subsection, we construct a Gaussian graphical model from our
+sample. Two major steps are involved in this procedure: construction
+of the independence graph and likelihood inference. To this end, we
+test for independence using the chi-square test and fit the variance
+matrix using iterative proportional fitting. Since we generated the
+data, we know that the samples are identically and independtally
+distributed (i.i.d). The following conditional independence statements
+can be read from the graph:
+
+
+\subsubsection{Inference}
+
+In a first step, the covariance matrix and its inverse are
+computed. Then the partial correlations are obtained.
+
+% Construct graph, test for goodness of fit
+
+\subsubsection{Fitting}
+
+Now, we use the IPF algorithm to update the sample variance matrix and
+fit it to the given graph.
+
 \subsection{Vine Copula}
 
 In our final approach, we try to capture the dependence structure
@@ -251,7 +276,12 @@ without modifications of the original map image. In order to do, we
 need a more powerful model. The use of \emph{copulas} allows to model
 marginal distributions and dependence structure independently,
 allowing for convenient and powerful representation of joint
-probability distributions.
+probability distributions. Vine copulas leverage these advantages and
+bring the advantages to higher dimensional distributions.
+
+While it is theoretically possible to get $F(x)$ by evaluating it at
+\ldots, in practice we have to calculate the inversion of the
+(empiricial / psuedo) CDF.
                                           
 \section{Discussion}
 
