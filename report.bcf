@@ -1966,6 +1966,7 @@
   <bcf:section number="0">
     <bcf:citekey order="1">cooke2015vine</bcf:citekey>
     <bcf:citekey order="1">elidan2013copulas</bcf:citekey>
+    <bcf:citekey order="2">whittaker2009graphical</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="nyt">
   <bcf:sorting>

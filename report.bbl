@@ -62,6 +62,25 @@
       \field{year}{2013}
       \field{pages}{39\bibrangedash 60}
     \endentry
+    \entry{whittaker2009graphical}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=42ee6489934dbace9a9a199b63eda296}{Whittaker}{W\bibinitperiod}{Joe}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=42ee6489934dbace9a9a199b63eda296}{Whittaker}{W\bibinitperiod}{Joe}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Publishing}%
+      }
+      \strng{namehash}{42ee6489934dbace9a9a199b63eda296}
+      \strng{fullhash}{42ee6489934dbace9a9a199b63eda296}
+      \field{sortinit}{W}
+      \field{labelyear}{2009}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Graphical models in applied multivariate statistics}
+      \field{title}{Graphical models in applied multivariate statistics}
+      \field{year}{2009}
+    \endentry
   \endsortlist
 \endrefsection
 \endinput

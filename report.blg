@@ -1,13 +1,13 @@
 [0] Config.pm:318> INFO - This is Biber 1.8
 [0] Config.pm:321> INFO - Logfile is 'report.blg'
-[38] biber:275> INFO - === Thu Jun 16, 2016, 22:13:29
-[38] Biber.pm:333> INFO - Reading 'report.bcf'
-[76] Biber.pm:630> INFO - Found 2 citekeys in bib section 0
-[219] Biber.pm:3053> INFO - Processing section 0
-[388] Biber.pm:3190> INFO - Looking for bibtex format file 'library.bib' for section 0
-[389] bibtex.pm:808> INFO - Found BibTeX data source 'library.bib'
-[492] Biber.pm:2939> INFO - Overriding locale 'en_US.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
-[492] Biber.pm:2945> INFO - Sorting 'entry' list 'nyt' keys
-[492] Biber.pm:2949> INFO - No sort tailoring available for locale 'en_US.UTF-8'
-[496] bbl.pm:482> INFO - Writing 'report.bbl' with encoding 'ascii'
-[496] bbl.pm:555> INFO - Output to report.bbl
+[36] biber:275> INFO - === Sun Jun 19, 2016, 00:12:41
+[36] Biber.pm:333> INFO - Reading 'report.bcf'
+[73] Biber.pm:630> INFO - Found 3 citekeys in bib section 0
+[126] Biber.pm:3053> INFO - Processing section 0
+[180] Biber.pm:3190> INFO - Looking for bibtex format file 'library.bib' for section 0
+[181] bibtex.pm:808> INFO - Found BibTeX data source 'library.bib'
+[294] Biber.pm:2939> INFO - Overriding locale 'en_US.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[295] Biber.pm:2945> INFO - Sorting 'entry' list 'nyt' keys
+[295] Biber.pm:2949> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[299] bbl.pm:482> INFO - Writing 'report.bbl' with encoding 'ascii'
+[299] bbl.pm:555> INFO - Output to report.bbl

@@ -1,0 +1,72 @@
+The low values of explained variation for x ($R^2$(x; rest))and y
+($R^2$(x; rest)) show that the used approach is not promising. This is
+not surprising, given the fact that the colors are non-linearly
+distributed in the image (see Figure\ref{fig:colordist} for the
+analysis of the colors). Two alternatives could be used to improve the
+model's performance. Here, we investigate both.
+\begin{itemize}
+\item Alternative 1: Change the map image such that higher $R^2$ are
+  obtained
+\item Alternative 2: Use a more powerful model
+\end{itemize}
+
+
+\subsection{Different map image}
+
+\begin{figure}[h]
+  \centering
+  %\includegraphics[width=0.7\textwidth]{}
+  \caption{A different map image that makes use of the used features.}
+  \label{fig:newmap}
+\end{figure}
+
+In this case, the image was chosen by manual analysis of the
+features. A more interesting case would be to generate the image based
+on desired properties of the inverse correlation matrix. 
+An ideal inverse correlation matrix would look like:
+
+\begin{table}                                   
+\centering                                      
+\begin{tabular}{l|rrrrr}                    
+    red   & 1.30  &       &       &       &      \\  
+    green & -0.59 & 2.64  &       &       &      \\
+    blue  & 0.02  & -1.81 & 2.37  &       &      \\ 
+    x     & 0.14  & -0.02 & 0.01  & 1.02  &      \\ 
+    y     & 0.13  & 0.24  & -0.32 & -0.01 & 1.06 \\ 
+  \midrule
+  $R^2$   & 0.23  & 0.62  & 0.58  & 0.02  & 0.06 \\
+  \midrule
+          & red   & green & blue  & x     & y
+\end{tabular}                                   
+\caption{Inverse correlation matrix}                        
+\label{table:MyTableLabel}                      
+\end{table} 
+
+%$R^2$   & *  & *  & *  & 1.00  & 1.00 \\
+
+One possible solution would be to set all correlations to a high
+value.
+
+
+\subsection{The backward approach}
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[every node={}]
+    \node[latent, minimum size=1.2cm] (z1) {$Z_1$} ; %
+    \node[latent, right=of z1, minimum size=1.2cm] (z2) {$Z_2$} ; %
+    \node[latent, right=of z2, minimum size=1.2cm] (z3) {$Z_3$} ; %
+    \node[latent, below right=of z1, minimum size=1.2cm] (x) {$X$} ; %
+    \node[latent, below right=of z2, minimum size=1.2cm] (y) {$Y$} ; %
+    \edge[-] {z1} {x}; \edge[-] {z1} {y}; \edge[-] {z2} {x}; \edge[-]
+    {z2} {y}; \edge[-] {z3} {x}; \edge[-] {z3} {y};
+  \end{tikzpicture}
+  \caption{The graphical model used for generating ideal images.}
+\end{figure}
+
+Knowing the criteria for computing $R^2$, we could construct optimal
+images for the given approach. These images will be gradient
+images. Since images consist of three channels, we could encode the
+information in two channels, and use arbitrary information in the
+third channel---and therefore even keep our initial image to a great
+extent.
